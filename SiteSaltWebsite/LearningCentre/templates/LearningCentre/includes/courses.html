@@ -1,0 +1,29 @@
+<div class="course-wrapper wrapper">
+        <h2>Courses</h2>
+        <div class="video-lockup lockup-main">
+        {% for course in courses %}
+            <div class="course-container">
+                <div class="img-container">
+                    <img src="{{course.image.url}}" alt="{{course.title}}">
+                </div>
+                <div class="course-information">
+                    <div class="video-meta">
+                        <h3>{{course.title}}</h3>
+                        
+                    </div>
+                    <div class="description">
+                        <p>{{course.short_description}}</p>
+                    </div>
+                    <div class="duration">
+                        <p>Durarion: <span>{{course.course_time}}</span> </p>
+                    </div>
+                    <div class="footer">
+                        <p><a href="courses/{{course.slug}}">Take Course</a></p>
+                    </div>
+                </div>
+                
+            </div>
+        {% endfor %}
+        </div>
+        <p><a href="/learning-centre/courses">View All</a></p>
+    </div>

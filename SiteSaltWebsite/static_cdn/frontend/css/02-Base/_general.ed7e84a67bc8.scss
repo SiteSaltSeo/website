@@ -1,0 +1,17 @@
+article, section {
+    padding:50px 0;
+
+    &:first-of-type {
+        padding:100px 0 50px 0;
+    }
+    &:last-of-type {
+        padding:50px 0 100px 0;
+    }
+}
+
+// .section-dark{
+//     background-color: #333743;
+// }
+.wrapper {
+    margin-top: 50px;
+}

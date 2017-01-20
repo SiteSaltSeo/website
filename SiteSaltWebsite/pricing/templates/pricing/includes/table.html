@@ -1,0 +1,34 @@
+<div class="pricing-wrapper pricing-alt">
+    <div class="table">
+        <div class="column">
+            <div class="plan-row empty header"></div>
+            {% for tool in tools %}
+            <div class="tool-name tool-count-{{tool.plan.count}} plan-row">{{tool}}</div>
+            {% endfor %}
+        </div>
+        {% for p in plan %}
+        <div class="column plan-col">
+            <div class="td plan-row header">
+                <span class="price-meta">{{p}}</span>
+                <div>{{p.price}} <sub>/mo</sub></div>
+            </div>
+            <div class="td plan-row">
+                <div class="tick tick-1"></div>
+            </div>
+            <div class="td plan-row">
+                <div class="tick tick-1"></div>
+            </div>
+            <div class="td plan-row">
+                <div class="tick tick-1"></div>
+            </div>
+            <div class="td plan-row">
+                <div class="tick tick-1"></div>
+            </div>
+            <div class="td plan-row">
+                <div class="tick tick-1"></div>
+            </div>
+            <div class="plan-signup"><a href="">signup</a></div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

@@ -1,0 +1,99 @@
+
+.pricing-alt{
+    margin-top: 100px;
+    .table{
+        display: flex;
+        justify-content: space-between;
+
+        .column{
+            background-color: #fff;
+            &:last-of-type{
+                .plan-row {
+                    border-right: none;
+                }
+            }
+            .header {
+                height: 153px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                
+                div{
+                    @include fontSize(33px);
+                    text-align: center;
+                    letter-spacing: 1px;
+                    sub{
+                        font-weight: 300;
+                    }
+                }
+                span{
+                   @include fontSize(22px);
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                    text-align: center;
+                }
+            }
+            &:first-of-type{
+                width: 459px;
+            }
+
+            .tool-name{
+                padding: 14px 0 15px 24px;
+                @include fontSize(22px);
+            }
+            .plan-row {
+                border-bottom: 1px solid #dddddd;
+                border-right: 1px solid #dddddd;
+            }
+            .plan-signup{
+                text-align: center;
+                margin-top: 50px;
+                opacity: 0;
+                a{
+                    @include buttonLarge($sitesaltCTA);
+                    opacity: 1;
+                }
+            }
+        }
+        .plan-col {
+            width: 260px;
+            min-height: 560px;
+            .tick{
+                background:{
+                    image: url("../../frontend/icons/icon-tick-alt.svg");
+                    position: center;
+                    size: initial;
+                    repeat: no-repeat;
+                }
+                height: 12px;
+                width: 14px;
+                padding: 30px 0 ;
+                margin: auto;
+            }
+            transition: all 0.3s ease-in-out;
+            &:hover{
+                
+                
+                .header{
+                    div{
+                        color: #4DB6AC
+                    }
+                    span{
+                        color: #4DB6AC
+                    }
+                }
+                .plan-row {
+                    border-bottom: none;
+                    border-right: none;
+
+                }
+                .plan-signup {
+                    opacity: 1;
+                }
+                filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.4));
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
+

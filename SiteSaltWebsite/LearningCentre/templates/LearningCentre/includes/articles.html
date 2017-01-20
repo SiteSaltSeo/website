@@ -1,0 +1,27 @@
+    <div class="article-wrapper wrapper ">
+        <h2>Articles</h2>
+        <div class="article-lockup flex-lockup lockup-main">
+            {% for article in articles %}
+                <div class="article-container section-container " style="background-image: url( {{article.image.url}} )">
+                    <div class="overlay"></div>
+                    <div class="article-information">
+                        <div class="article-meta">
+                            <span>{{article.author.first_name}} {{article.author.last_name}}</span>
+                        </div>
+                        <div class="article-content">
+                        <h3>{{article.title}}</h3>
+                        <p>{{article.short_description}}</p> 
+                        </div>
+                        <div class="footer">
+                            <span>{{article.read_time}}min.read</span>
+                            <p><a href="{{article.slug}}">Read Article</a></p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+        <p><a href="/learning-centre/articles">View All</a></p>
+    </div>
+    

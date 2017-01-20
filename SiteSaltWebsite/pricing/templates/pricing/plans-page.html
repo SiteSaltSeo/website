@@ -1,0 +1,12 @@
+{% extends "frontend/base.html" %}
+{% block head_title %}Plans | {{ block.super }} {% endblock head_title %}
+{% block body_class %}plans{% endblock %}
+{% block content %}
+    <section class="plans">
+        {% for page in pages%}
+            <h1>{{page.title}}</h1>
+            <p class="paragraph-alt">{{page.content}}</p>
+        {% endfor %}
+        {% include "pricing/includes/table.html" %}
+    </section>
+{% endblock %}

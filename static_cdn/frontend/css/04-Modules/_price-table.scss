@@ -1,0 +1,84 @@
+
+.pricing-wrapper{
+    max-width: 1180px;
+    margin: auto;
+
+    table{
+        margin-top: 92px;
+        width: 100%;
+        td{
+            font-family: sans-serif;
+            font-weight: 4100;
+            @include fontSize(16px);
+            padding: 10px 0 ;
+            letter-spacing: 0.5px;
+        }
+        
+        thead{
+            td{
+                color: #fff;
+
+            }
+            .plan{
+                width: 238px;
+                text-align: center;
+                border: 1px solid #fff;
+                border-top:none;
+                padding-bottom: 30px;
+            }
+
+        }
+        tbody{
+            tr{
+                border-top: 1px solid #fff;
+                .tool-name{
+                    padding-left: 24px;
+                    border-right: 1px solid #fff;
+                }
+                .cell{
+                    border-right: 1px solid #fff;
+                    background:{
+                            image: url("../../frontend/icons/icon-tick.svg");
+                            position: center;
+                            size: initial;
+                            repeat: no-repeat;
+                        }
+                    @include size(15px);
+                }
+                td{
+                    color:#fff;
+                    p{
+                            margin: 9px 0;
+                    }
+                    a{
+                        color: #fff;
+                        @include buttonSmall(#fff);
+                        color: #2D2E32;
+                        
+                        
+                    }
+                }
+                &.tool-count-1{
+                    .tick-1, .tick-2{
+                        background-image: url("../../frontend/icons/icon-cross.svg")
+                    }
+                }
+                    &.tool-count-2{
+                    .tick-1{
+                        background-image: url("../../frontend/icons/icon-cross.svg")
+                    }
+                }
+            }
+        }
+        tfoot{
+            .plan-signup{
+                text-align: center;
+                a{
+                    @include buttonSmall($sitesaltCTA);
+                    padding: 8px 22px;
+                }
+            }
+        }
+    }
+}
+

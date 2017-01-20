@@ -1,0 +1,21 @@
+.jumbotron{
+    background:{
+        image: url('./../img/header.png');
+        position: center;
+        size: cover;
+    }
+    .container{
+        margin: 105px auto;
+    }
+    h1{
+        @include JumboHeader;
+        text-align: center;
+        color: #fff;
+    }
+    p{
+        text-align: center;
+    }
+    .btn-primary{
+        @include buttonLarge($sitesaltCTA);
+    }
+}

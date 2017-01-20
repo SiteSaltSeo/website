@@ -1,0 +1,10 @@
+{% extends "frontend/base.html" %}
+{% block body_class %}home{% endblock %}
+{% block content %}
+<h1>{{ plan.name }}</h1>
+<div>
+    {{ plan.description }}
+    <p>{{ plan.price }}</p>
+    <p><a href="">Sign Up</a></p>
+</div>
+{% endblock %}

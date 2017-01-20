@@ -1,0 +1,9 @@
+{% extends "frontend/base.html" %}
+{% block head_title %}{{object_list.title}} | {{ block.super }}{% endblock head_title %}
+{% block body_class %}tools-detail{% endblock %}
+{% block content %}
+    <h1>{{object_list.title}}</h1>
+    <div class="tool-description">
+        {{object_list.description}}
+    </div>
+{% endblock %}

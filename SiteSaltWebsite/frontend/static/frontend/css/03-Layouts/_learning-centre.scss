@@ -1,0 +1,22 @@
+.section{
+    h2{
+        text-align: left;
+        @include fontSize(24px);
+        text-transform: uppercase;
+        margin-bottom: 32px;
+    }
+    .wrapper{
+        @include maxWidth(1180px);
+        >p{
+            >a{
+                 @include buttonLarge($sitesaltCTA);
+            }
+        }
+
+    }
+    .section-lockup {
+        margin-bottom: 100px;
+        margin-top: 80px;
+    }
+
+}

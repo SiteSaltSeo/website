@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="36px" viewBox="0 0 24 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Page 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.4321,1.9798 L4.435,27.1827 C4.436,28.0768 3.7046,28.8082 2.8105,28.8082 L2.3193,28.8082 C1.4252,28.8082 0.6938,28.0768 0.6938,27.1837 L0.6909,1.9808 C0.6899,1.0867 1.4213,0.3553 2.3154,0.3553 L2.8066,0.3553 C3.7007,0.3553 4.4321,1.0857 4.4321,1.9798 Z" id="path-1"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(0.000000, -1.000000)">
+            <image id="Image-1" x="0" y="12.045" width="23.2422" height="23.5997" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAA1teXP8meAAAAqdJREFUSA2tVc1uEzEQ9mxC0xKVA4cK6AmBhKoVUWhRAtwgEtdeeBnOPAMST8EbVC0cgAqSho2gFQKpHFDETyV+Lk226+Ebb+1dJ0LEUpxoPTMez+x839hLzfbdzYqKHinmi0oRKfxYMSk2CikYYSFmiqAYWWzQzRoc8z1YV5BlYB0i/8DzIW207h0g1DVjnPMDL/oZWWlpznFdOBSeIYHac5a5C5xUUcYeQNy0sRkDMD47xZAZaAJCmUCE0lDkj20GfNjNgmjgkO87DiQg0aAKxx6oKwbR0+7u1oPCMLu03uq8hPctu0MrlUQnkfYhYlWzDqEzOmq5vCfL9CBKdne+AJXvboH4hpMDhDiOF4BEqRv5OHmz/VFIRiMXRIOP1UbjzkpAbOO6UF9ZA+hVuw/kvINsukhsHkzVxVpwFcTRdRv8dE5klgrQBtyT2Q6cxXUrzzyTani+zAPRTQKdZl4FAC24AsTyKkAjFxX0+88/oY4/9g1ASniCiQqy0aioAIE1MvZtApyNK1fb7XNO/48Qx7fPo1EuFW78NUlefBPdQCQCTqCDSU7jsq43xT7LOLNU8/HHAbP7XALW7BLIYqRm56FC5CdgMvDkcWyqjHpWNHNIJxF5BKP9pysg+rkPHkYuSQjREwTjeE1X0O12UwR3C+iqNSHPJfyHID64Z2O7jJfUR0f6vdXd0TYGEh7oZr5I1cX62a2NVuct7mJQgp9c5OZmkY+o3MHQmWNIdRsQhg+HhzvHVvcSkMaV4WiHCynppKaJJTvMtW4euWhsuS6iDHvAcq3Upsag/SvDOoXMSFCCeTKB+j2Awzgk4LSvflW2VcrKcDhML6xe/gUsOig2AsL4KOGEMJ0AW2mCFBSkuIrHYEFeZAyApPPGsMv8uPd6+wlmN/4C1Tbuv0iwtnUAAAAASUVORK5CYII="></image>
+            <g id="Group-4" transform="translate(9.000000, 0.644700)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-3"></g>
+                <polygon id="Fill-2" fill="#333743" mask="url(#mask-2)" points="-4.3091 33.8082 9.435 33.8082 9.435 -4.6447 -4.3091 -4.6447"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

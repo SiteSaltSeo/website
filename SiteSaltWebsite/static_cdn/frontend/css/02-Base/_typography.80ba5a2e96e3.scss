@@ -1,0 +1,36 @@
+html{
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, a{
+    -webkit-font-smoothing: antialiased;
+    font-family: Avenir, Nunito, sans-serif;
+    color: $sitesaltBaseGrey;
+    text-align: center;
+}
+p{
+     -webkit-font-smoothing: antialiased;
+    font-family: Avenir, Nunito, sans-serif;
+    color: $sitesaltLightGrey;
+    @include fontSize(18px);
+    &.paragraph-alt{
+        color: $sitesaltBaseGrey;
+    }
+    max-width: 1081px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    @include fontSize(36px);
+    margin-bottom: 50px;
+    font-weight: 700;
+}
+
+h3{
+    @include fontSize(20px);
+}
+@mixin JumboHeader(){
+    @include fontSize(48px);
+    font-weight: 900;
+}

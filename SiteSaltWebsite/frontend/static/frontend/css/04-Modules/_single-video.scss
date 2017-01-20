@@ -1,0 +1,35 @@
+.video-container, .section-container {
+   max-width: 470px;
+    .video-container{
+        height: auto;
+        max-width: inherit;
+        max-height: 310px;
+        margin-bottom: 20px;
+        
+        iframe{
+            @include shadowLarge(0, 0, 0, 0.8);
+            border-radius: 8px;
+        }
+    }
+    .video-information {
+        text-align: left;
+        h3{
+            text-align: left;
+            display: inline-block;
+            @include fontSize(22px);
+        }
+        span{
+            margin-left: 30px;
+        }
+        p{
+            color: #4A4E5D;
+            @include fontSize(16px);
+            margin: 15px 0;
+            text-align: left;
+        }
+        .footer >p{
+            color: $sitesaltLightGrey;
+            text-transform: capitalize;
+        }
+    }
+}

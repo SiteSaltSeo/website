@@ -1,0 +1,21 @@
+article, section {
+    padding:100px 0;
+
+    // &:first-of-type {
+    //     padding:100px 0 50px 0;
+    // }
+    // &:last-of-type {
+    //     padding:50px 0 100px 0;
+    // }
+}
+
+.section-dark{
+    background-color: #333743;
+    h1,h2,h3,h4,h5,h6,p {
+        color: #fff;
+    }
+}
+
+.wrapper {
+    margin-top: 50px;
+}

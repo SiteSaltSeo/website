@@ -1,0 +1,24 @@
+{% extends "frontend/base.html" %}
+{% block head_title %}Learning Centre | {{ block.super }} {% endblock head_title %}
+{% block body_class %}learnin-centre{% endblock %}
+{% block content %}
+    {% for content in page %}
+    <section>
+        <h1>{{content.title}}</h1>
+        <div>
+            <p>{{content.content}}</p>
+        </div>
+    </section>
+    {% endfor %}
+    <article class="articles section">
+        {% include 'LearningCentre/includes/articles.html' %}
+    </article>
+     <hr>
+    <article class="courses section">
+        {% include 'LearningCentre/includes/courses.html' %}
+    </article>
+    <hr>
+    <article class="videos section">
+        {% include 'LearningCentre/includes/videos.html' %}
+    </article>
+{% endblock %}

@@ -1,0 +1,27 @@
+    <div class="video-wrapper wrapper ">
+        <h2>Videos</h2>
+        <div class="video-lockup flex-lockup lockup-main">
+            {% for video in videos %}
+                <div class="video-container">
+                    <div class="video-container">
+                        <iframe width="470" height="310px" src="https://www.youtube.com/embed/{{video.youtube_id}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-information">
+                        <div class="video-meta">
+                            <h3>{{video.title}}</h3>
+                            <span>{{video.play_time}}</span>
+                        </div>
+                        <div class="description">
+                        <p>{{video.short_description}}</p> 
+                        </div>
+                        <div class="footer">
+                            <p>BY {{video.author.first_name}} {{video.author.last_name}}
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+        <p><a href="/learning-centre/videos">View All</a></p>
+    </div>

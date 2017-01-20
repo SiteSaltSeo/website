@@ -1,0 +1,62 @@
+
+<section class="learning-centre section">
+    <h1>Latest From the Learning Center</h1>
+    <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac.</p>
+    <div class="video-wrapper wrapper section-lockup ">
+        <h2>Videos</h2>
+        <div class="video-lockup flex-lockup lockup-main">
+            {% for video in videos %}
+                <div class="video-container">
+                    <div class="video-container">
+                        <iframe width="470" height="310px" src="https://www.youtube.com/embed/{{video.youtube_id}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-information">
+                        <div class="video-meta">
+                            <h3>{{video.title}}</h3>
+                            <span>{{video.play_time}}</span>
+                        </div>
+                        <div class="description">
+                        <p>{{video.short_description}}</p> 
+                        </div>
+                        <div class="footer">
+                            <p>BY {{video.author.first_name}} {{video.author.last_name}}
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+        </div>
+        <p><a href="/learning-centre/videos">View More</a></p>
+    </div>
+    <hr>
+    <div class="course-wrapper wrapper section-lockup">
+        <h2>Courses</h2>
+        <div class="video-lockup lockup-main">
+        {% for course in courses %}
+            <div class="course-container">
+                <div class="img-container">
+                    <img src="{{course.image.url}}" alt="{{course.title}}">
+                </div>
+                <div class="course-information">
+                    <div class="video-meta">
+                        <h3>{{course.title}}</h3>
+                        
+                    </div>
+                    <div class="description">
+                        <p>{{course.short_description}}</p>
+                    </div>
+                    <div class="duration">
+                        <p>Durarion: <span>{{course.course_time}}</span> </p>
+                    </div>
+                    <div class="footer">
+                        <p><a href="learning-centre/courses/{{course.slug}}">Take Course</a></p>
+                    </div>
+                </div>
+                
+            </div>
+        {% endfor %}
+        </div>
+        <p><a href="/learning-centre/courses">View More</a></p>
+    </div>
+</section>

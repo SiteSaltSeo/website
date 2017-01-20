@@ -1,0 +1,55 @@
+
+
+//Function to calculate pixels into rems
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+
+//Mixin to convert pixels into rems and adds pixel fallback;
+@mixin fontSize($size) {
+    font-size: $size; //Fallback in px
+    font-size: calculateRem($size);
+}
+
+//Buttons
+
+@mixin buttonLarge( $color ){
+    background-color: $color;
+    opacity: 0.75;
+    border-radius: 6px;
+    border-color: transparent;
+    color: #fff;
+    padding: 13px 35px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include transition(all, 0.3s, ease-in-out);
+
+    &:hover{
+      opacity: 1;
+      @include transition(all, 0.3s, ease-in-out);
+    }
+}
+
+@mixin buttonSmall( $color ){
+    background-color: $color;
+    opacity: 0.75;
+    border-radius: 4px;
+    border-color: transparent;
+    color: #fff;
+    padding: 8px 15px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-decoration: none;
+    @include transition(all, 0.3s, ease-in-out);
+
+    &:hover{
+      opacity: 1;
+      @include transition(all, 0.3s, ease-in-out);
+    }
+}

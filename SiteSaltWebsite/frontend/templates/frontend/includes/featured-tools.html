@@ -1,0 +1,21 @@
+<h1>Featured Tools</h1>
+<p class="paragraph-alt">Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus vestibulum. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem.</p>
+<div class="wrapper tools-wrapper">
+    <div class="row">
+        {% for feature in featured %}
+                {{feauture.plan}}
+            <div class="col-sm-6 col-md-3">
+                <div class="thumbnail">
+                    <img src="{{feature.icon.url}}" alt="{{feature.icon.name}}">
+                    <div class="caption">
+                        <h3>{{feature.title}}</h3>
+                        <p class="paragraph-alt" >{{feature.description | linebreaks | truncatechars:120}}</p>
+
+                        <p><a href="{{ feature.get_absolute_url }}" class="btn btn-default" role="button">Read More</a></p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+<p><a class="btn btn-primary btn-lg" href="/features" role="button">View All</a></p>

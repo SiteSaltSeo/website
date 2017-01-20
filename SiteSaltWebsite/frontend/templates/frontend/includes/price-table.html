@@ -1,0 +1,37 @@
+{% load get_range %}
+<div class="pricing-wrapper">
+    <h1>Pricing Structure</h1>
+    <p>Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac.</p>
+    <table>
+        <thead>
+        <tr>
+            <td></td>
+             {% for p in plan %}
+                 <td class="plan">{{p}}</td>
+            {% endfor %}
+            <td></td>
+        </tr>
+        </thead>
+        <tbody>
+            {% for tool in tool_all %}
+            <tr class="tool-{{tool.id}} tool-count-{{tool.plan.count}}">
+                <td class="tool-name">{{tool}}</td>
+                    <td class="cell tick-1"></td>
+                    <td class="cell tick-2"></td>
+                    <td class="cell tick-3"></td>
+                <td><p><a href="{{ tool.get_absolute_url }}">Read More</a></p></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+         <tfoot>
+            <tr>
+                <td></td>
+                {% for p in plan %}
+                    <td class="plan-signup"><a href="{{p.get_absolute_url}}">signup</a></td>
+                {% endfor %}
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
