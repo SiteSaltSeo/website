@@ -15,7 +15,7 @@ class Tool(models.Model):
     title = models.CharField(max_length=40)
     icon = models.FileField(null=True, upload_to=upload_location)
     image = models.ImageField("Tool Featured Image",  blank=True, null=True)
-    short_description = HTMLField("Short description(max length 400 charachters)", max_length=400, blank=True, null=True)
+    short_description = HTMLField("Short description(max length 150 charachters)", max_length=150, blank=True, null=True)
     description = HTMLField()
     notes = HTMLField("Additioanl Notes for Tooltip", null=True, blank=True)
     slug = models.SlugField(unique=True, default=title)

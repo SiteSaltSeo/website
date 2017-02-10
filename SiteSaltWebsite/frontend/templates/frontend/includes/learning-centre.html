@@ -7,16 +7,15 @@
         <div class="video-lockup flex-lockup lockup-main">
             {% for video in videos %}
                 <div class="video-container">
-                    <div class="video-container">
-                        <iframe width="470" height="310px" src="https://www.youtube.com/embed/{{video.youtube_id}}" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <a href="/learning-centre/videos/{{video.slug}}">
+                        <div class="video-container">
+                            <img src="{{video.image.url}}" alt="{{video.alt_tag}}">
+                        </div>
+                    </a>
                     <div class="video-information">
                         <div class="video-meta">
                             <h3>{{video.title}}</h3>
                             <span>{{video.play_time}}</span>
-                        </div>
-                        <div class="description">
-                        <p>{{video.short_description}}</p> 
                         </div>
                         <div class="footer">
                             <p>BY {{video.author.first_name}} {{video.author.last_name}}

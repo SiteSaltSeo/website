@@ -1,0 +1,45 @@
+.single-article-page {
+    display: flex;
+    justify-content: space-around;
+    article {
+        max-width: 760px;
+        padding: 0;
+        .article-wrapper {
+            h1, p {
+                text-align: left;
+            }
+            .article-head {
+                span {
+                    color: $sitesaltLightBlue;
+                }
+            }
+        }
+    }
+    aside {
+        max-width: 364px;
+    }
+}
+.next-article {
+    background: {
+        size: cover;
+        position: center;
+        repeat: no-repeat;
+    }
+    .content-container {
+
+    }
+    a {
+        
+        h1 {
+            @include fontSize(36px);
+            color: #fff;
+            margin-bottom: 25px;
+        }
+        
+        p {
+            @include fontSize(18px);
+            color: #fff;
+            
+        }
+    }
+}

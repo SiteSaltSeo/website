@@ -1,0 +1,69 @@
+{% extends "frontend/base.html" %}
+{% block head_title %}Videos | {{ block.super }} {% endblock head_title %}
+{% block body_class %}learnin-centre{% endblock %}
+{% block content %}
+    <p class="back-arrow" ><a href=""><span>{%include 'LearningCentre/includes/arrow.svg'%}</span>back </a></p>
+    {% for content in pages %}
+    <section>
+        <h1>{{content.title}}</h1>
+        <div>
+            <p>{{content.content}}</p>
+        </div>
+    </section>
+    {% endfor %}
+    <section class="section-video">
+        <div class="video-wrapper wrapper ">
+            <div class="video-lockup flex-lockup lockup-main">
+                {% for video in videos %}
+                    <div class="video-container">
+                        <a href="/learning-centre/videos/{{video.slug}}">
+                            <div class="video-container">
+                                <img src="{{video.image.url}}" alt="{{video.alt_tag}}">
+                            </div>
+                        </a>
+                        <div class="video-information">
+                            <div class="video-meta">
+                                <h3>{{video.title}}</h3>
+                                <span>{{video.play_time}}</span>
+                            </div>
+                            <div class="footer">
+                                <p>BY {{video.author.first_name}} {{video.author.last_name}}
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="pagination">
+                <span class="step-links">
+                    {% if videos.has_previous %}
+                        <a href="?page={{ videos.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                            {{ videos.number }} of {{ videos.paginator.num_pages }}
+                    </span>
+
+                    {% if videos.has_next %}
+                        <a href="?page={{ videos.next_page_number }}">next</a>
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <aside>
+            <div class="search-articles">
+                <h4>Search</h4>
+                {% include 'LearningCentre/includes/searchbar-alt.html' %}
+            </div>
+            <div class="recent-posts">
+                <h4>Recent Videos</h4>
+                <ul>
+                    {% for video in videos %}
+                    <li><span>{% include 'frontend/includes/icon-radio.svg' %}</span><a href="/learning-centre/articles/{{articles.slug}}">{{video.title}}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </aside>
+    </section>
+{% endblock %}

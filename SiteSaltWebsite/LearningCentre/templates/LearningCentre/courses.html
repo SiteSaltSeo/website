@@ -1,0 +1,68 @@
+{% extends "frontend/base.html" %} {% block head_title %}Courses | {{ block.super }} {% endblock head_title %} 
+{% block body_class %}courses{% endblock %} {% block content %} {% for page in pages %}
+<p class="back-arrow" ><a href=""><span>{%include 'LearningCentre/includes/arrow.svg'%}</span>back </a></p>
+<section>
+    <h1>{{page.title}}</h1>
+    <div>
+        <p>{{page.content}}</p>
+    </div>
+</section>
+{% endfor %}
+<article class="course-section">
+    <div class="course-wrapper">
+        <div class="course flex">
+            <div class="video-lockup lockup-main">
+            {% for course in courses %}
+                <div class="course-container">
+                    <div class="img-container">
+                        <img src="{{course.image.url}}" alt="{{course.title}}">
+                    </div>
+                    <div class="course-information">
+                        <div class="video-meta">
+                            <h3>{{course.title}}</h3>
+                            
+                        </div>
+                        <div class="description">
+                            <p>{{course.short_description}}</p>
+                        </div>
+                        <div class="duration">
+                            <p>Durarion: <span>{{course.course_time}}</span> </p>
+                        </div>
+                        <div class="footer">
+                            <p><a href="{{course.slug}}">Take Course</a></p>
+                        </div>
+                    </div>
+                    
+                </div>
+            {% endfor %}
+            </div>
+            <aside>
+                <div class="search-articles">
+                    <h4>Search</h4>
+                    {% include 'LearningCentre/includes/searchbar-alt.html' %}
+                </div>
+                <div class="recent-posts">
+                    <h4>Recent Courses</h4>
+                    <ul>
+                        {% for courses in courses_recent %}
+                        <li><span>{% include 'frontend/includes/icon-radio.svg' %}</span><a href="/learning-centre/articles/{{articles.slug}}">{{courses.title}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <div class="pagination">
+            <span class="step-links">
+                    {% if courses.has_previous %}
+                        <a href="?page={{ articles.previous_page_number }}">previous</a>
+                    {% endif %}
+
+                    <span class="current">
+                        {{ courses.number }} of {{ courses.paginator.num_pages }}
+                    </span> {% if courses.has_next %}
+            <a href="?page={{ courses.next_page_number }}">next</a> {% endif %}
+            </span>
+        </div>
+    </div>
+</article>
+{% endblock %}

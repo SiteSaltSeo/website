@@ -1,0 +1,21 @@
+.back-arrow {
+    text-align: left;
+    font-weight: 600;
+    margin-top: 30px;
+    span {
+        margin-right: 10px;
+    }
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        a {
+            color: $sitesaltAccent;
+            text-decoration: none;
+        }
+        .svg {
+            path {
+                fill: $sitesaltAccent;
+            }
+        }
+    }
+}

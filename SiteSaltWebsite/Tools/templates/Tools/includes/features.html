@@ -1,0 +1,25 @@
+{% load static %}
+<section class="features-list">
+    <h1>Features</h1>
+    <p>{% lorem 1 %}</p>
+    <div class="feature-wrap">
+        <div class="features">
+            {% for tool in object_list %}
+            <a href="{{tool.slug}}">
+                <div class="icon">
+                    <img src="{{tool.icon.url}}" alt="{{tool.icon}}">
+                </div>
+                <div class="info">
+                    <h2>{{tool.title}}</h2>
+                    <div class="description">
+                        <p>{{tool.short_description}}</p>
+                    </div>
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+        <div class="image">
+            
+        </div>
+    </div>
+</section>

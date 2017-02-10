@@ -1,0 +1,52 @@
+{% load staticfiles %}
+<footer>
+    <!--<ul class="upper">
+        <li class="footer-newsletter">
+            <h2>Subscribe</h2>
+            <div class="newsletter">
+                <input type="text" name="email" value="" placeholder="Email address">
+                <input type="button">
+            </div>
+        </li>
+    </ul>-->
+    <ul class="lower">
+        <li class="site-info">
+            <ul>
+                <li><a href="/">{% include "frontend/includes/logo.svg"%}</a></li>
+                <!--<li>© 2017 SiteSalt.</li>-->
+            </ul>
+        </li>
+        <li class="footer-nav">
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Learning Centre</a></li>
+                <li><a href="">Pricing</a></li>
+                <li><a href="">Terms of Service</a></li>
+                <li><a href="">Privacy Policy</a></li>
+            </ul>
+        </li>
+        <li class="footer-social">
+            <ul>
+                <li><a href="">{% include "frontend/includes/icon-facebook.svg"%}</a></li>
+                <li><a href="">{% include "frontend/includes/icon-google.svg"%}</a></li>
+                <li><a href="">{% include "frontend/includes/icon-twitter.svg"%}</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script type="text/javascript" src="{% static 'frontend/js/min/init-min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'frontend/js/min/material-min.js' %}"></script>
+    <script src="https://cdn.auth0.com/js/lock-9.min.js"></script>
+    <script src="https://cdn.auth0.com/js/lock/10.9.1/lock.min.js"></script>
+    <script>
+    var lock = new Auth0Lock('5bzkAYJBcFhrXXcnAUTiPksHNX1h6Nq8', 'sitesalt.auth0.com', {
+        auth: {
+        redirectUrl: 'http://127.0.0.1:3000/',
+        responseType: 'code',
+        params: {
+            scope: 'openid email' // Learn about scopes: https://auth0.com/docs/scopes
+        }
+        }
+    });
+    </script>
+</footer>

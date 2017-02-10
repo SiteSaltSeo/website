@@ -4,10 +4,6 @@
 {% block body_class %}tools-detail{% endblock %}
 {% block content %}
 {{ block.super}}
-{% for tool in object_list %}
-    <h1>{{tool.title}}</h1>
-    <div class="tool-description">
-        {{tool.description}}
-    </div>
-{% endfor %}
+{% include 'Tools/includes/dashboard.html' %}
+{% include 'Tools/includes/features.html' %}
 {% endblock %}

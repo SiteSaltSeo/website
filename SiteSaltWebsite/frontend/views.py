@@ -3,7 +3,7 @@ from Pages.models import Page
 from Tools.models import Tool
 from pricing.models import Plan
 from LearningCentre.models import Articles, Videos, Courses
-
+from Testimonials.models import Testimonial
 
 # Create your views here.
 def index(request):
@@ -15,6 +15,7 @@ def index(request):
     # featured_articles = Articles.objects.filter(featured=True)
     featured_videos = Videos.objects.filter(featured=True).order_by('-date_posted')[:2]
     featured_courses = Courses.objects.filter(featured=True).order_by('-date_posted')[:2]
+    testimonial_all = Testimonial.objects.all()
 
     context = {
         'pages' : pages,
@@ -24,6 +25,7 @@ def index(request):
         'tool_filter' : tool_filter,
         'videos' : featured_videos,
         'courses' : featured_courses,
-       
+        'testimonials' : testimonial_all
+
     }
     return render(request, 'frontend/home.html', context)

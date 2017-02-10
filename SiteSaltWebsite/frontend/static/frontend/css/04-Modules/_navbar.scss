@@ -1,7 +1,15 @@
 .navbar {
     margin-bottom: 0;
+    width: 100%;
+    background-color: #fff;
     .container{ 
         width: 100%;
+        .navbar-brand{
+            width: 150px;
+            img{
+                width: 100%;
+            }
+        }
         .page-nav {
             display: flex;
             justify-content: space-between;
@@ -11,8 +19,33 @@
             float: right;
             li {
                 a{
-                    color: $sitesaltCTA;
+                    @include buttonSmall(#fff);
+                    padding: 8px 15px;
+                    margin-top: 7px;
                     font-weight: bold;
+                    margin-right: 10px;
+                    // border: 2px solid $sitesaltBlue;
+                    color: $sitesaltBlue;
+                    &.sign-up {
+                        @include buttonSmall($sitesaltCTA);
+                        background-color: transparent;
+                        border: 1px solid $sitesaltCTA;
+                        color: $sitesaltCTA;
+                        padding: 8px 15px;
+                        margin-top: 7px;
+                        font-weight: bold;
+                        &:hover {
+                            background-color: $sitesaltCTA;
+                            opacity: 1;
+                            color: #fff;
+                        }
+                    }
+                    &:hover {
+                        // background-color: $sitesaltBlue;
+                        color: $sitesaltBlue;
+                        opacity: 1;
+                        // color: #fff;
+                    }
                 }
             }
         }
@@ -31,13 +64,25 @@
                 }
             }
             &.active {
-                border-bottom: 2px solid $sitesaltAccent;
+
                 a {
                     color: $sitesaltAccent;
                     font-weight: bold;
+                    text-decoration: line-through;
                 }
             }
         }
-        
+
+    }
+    &.sticky{
+        position: fixed;
+        z-index: 100;
+        filter: drop-shadow(0px 0px 7px rgba(0,0,0,0.2));
+        opacity: 0.9;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+            opacity: 1;
+            transition: all 0.3s ease-in-out;
+        }
     }
 }

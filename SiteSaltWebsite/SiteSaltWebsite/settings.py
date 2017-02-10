@@ -58,6 +58,11 @@ INSTALLED_APPS = [
     'LearningCentre',
     # 'avatar',
     'MailChimp',
+    "Testimonials",
+    'guardian',
+    'userprofiles',
+    'Accounts',
+    'django_auth0',
 
 ]
 
@@ -74,6 +79,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 
 ]
 
@@ -92,6 +98,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django_auth0.context_processors.auth0',
             ],
             'debug': DEBUG,
         },
@@ -99,6 +106,12 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'SiteSaltWebsite.wsgi.application'
+
+AUTH0_CALLBACK_URL = 'localhost:8000/callback'
+AUTH0_CLIENT_ID = '5bzkAYJBcFhrXXcnAUTiPksHNX1h6Nq8'
+AUTH0_SECRET = 'cepR95Ym0M0y-vUmvPa7a6qicmMu26Th2LYyhNf704CHPRqKrrm9EEMqc2v3v8LJ'
+AUTH0_DOMAIN = 'sitesalt.auth0.com'
+AUTH0_SUCCESS_URL = 'localhost:8000/loggedin'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
@@ -129,6 +142,23 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend', # default
+    'guardian.backends.ObjectPermissionBackend',
+    'django_auth0.auth_backend.Auth0Backend ',
+    
+)
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ),
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/

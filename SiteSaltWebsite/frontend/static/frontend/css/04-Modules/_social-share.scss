@@ -1,0 +1,55 @@
+.share {
+    max-width: 120px;
+    margin: auto;
+    cursor: pointer;
+    p {
+        margin-left: 10px;
+        text-transform: capitalize;
+        text-align: center;
+        color: #333743;
+        line-height: 20px;
+        display: flex;
+        @include fontSize(16px);
+        font-weight: 700;
+        span {
+            margin-right: 15px;
+        }
+    }
+    
+    ul {
+        padding: 0;
+        position: absolute;
+        margin: -40px 0 0 0;
+        height: 50px;
+        display: flex;
+        li {
+            list-style: none;
+            display: none;
+            opacity: 0;
+            transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            &:first-of-type {
+                margin-left: -10px ;
+            }
+            &:nth-of-type(2n) {
+                margin: -20px 10px 0 10px;
+            }
+            &:hover {
+
+                svg {
+                    g {
+                        fill: $sitesaltAccent;
+                    }
+                }
+            }
+        }
+        &.display {
+            li {
+                display: block;
+                opacity: 1;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}

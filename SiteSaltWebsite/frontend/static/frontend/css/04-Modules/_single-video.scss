@@ -6,9 +6,12 @@
         max-height: 310px;
         margin-bottom: 20px;
         
-        iframe{
+
+        img {
             @include shadowLarge(0, 0, 0, 0.8);
             border-radius: 8px;
+            max-width: 470px;
+            
         }
     }
     .video-information {

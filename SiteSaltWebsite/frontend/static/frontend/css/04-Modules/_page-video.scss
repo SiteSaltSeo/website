@@ -1,0 +1,47 @@
+.page-videos {
+    .video-jumbotron {
+        background: none;
+        padding: 0;
+        .container {
+            margin: 0;
+            width: 100vw;
+            max-width: 1440px;
+            padding: 0;
+            iframe {
+                width: inherit;
+            }
+        }
+    }
+    .single-video-page {
+        padding: 75px 0;
+    }
+    article {
+        padding-top: 0;
+        max-width: 952px;
+        margin: auto;
+    }
+    aside {
+        padding: 0 40px;
+    }
+    .video-container {
+        max-width: none;
+        max-height: none;
+
+        .video-meta {
+            
+        }
+    }
+    span {
+        margin-left: 0;
+        margin: 0 15px;
+    }
+    .video-information {
+        
+
+        h1 {
+            @include fontSize(50px);
+            text-align: left;
+            margin-top: 0px;
+        }
+    }
+}

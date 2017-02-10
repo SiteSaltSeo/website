@@ -4,9 +4,9 @@ article, section {
     // &:first-of-type {
     //     padding:100px 0 50px 0;
     // }
-    // &:last-of-type {
-    //     padding:50px 0 100px 0;
-    // }
+    &:nth-of-type(2n) {
+        padding:50px 0 100px 0;
+    }
 }
 
 .section-dark{
@@ -19,8 +19,16 @@ article, section {
 .wrapper {
     margin-top: 50px;
 }
+.featured-video {
+    margin: 150px auto 0 auto;
+}
 
 hr{
     max-width: 1140px;
     border-top: 1px solid #4a4a4a;
+}
+
+.section-flex {
+    display: flex;
+    justify-content: space-around;
 }

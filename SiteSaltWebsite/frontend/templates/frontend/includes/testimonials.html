@@ -1,0 +1,23 @@
+<h1>Testimonials</h1>
+<p>Barni is an elegant, modern and fully cutomizable Desktop UI Kit</p>
+<div class="testimonial-wrapper">
+    {% for testimonial in testimonials %}
+    <article>
+        <a href="#">
+            <div class="profile">
+                {% if testimonial.avatar %}
+                    <img src="{{testimonial.avatar.url}}" alt="{{testimonial.avatar}}">
+                {% endif %}
+            </div>
+            <div class="personal-details">
+                <h2>{{testimonial.name}}</h2>
+                <h3>{{testimonial.position}} | {{testimonial.company}}</h3>
+                <hr>
+                <div>
+                    <p>{{testimonial.testimonial | truncatechars:60}}</p>
+                </div>
+            </div>
+        </a>
+    </article>
+    {% endfor %}
+</div>

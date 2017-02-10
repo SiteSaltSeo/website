@@ -1,0 +1,48 @@
+{% extends "frontend/base.html" %}
+
+
+{% block content %}
+<section>
+    
+
+    <div class="col-sm-6 ">
+        <h3>{{title}}</h3>
+        <hr>
+
+        <!--<form method="POST" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.username}}
+            {{form.password}}
+            <input type="submit" class="btn btn-default" value="{{title}}">
+            
+        </form>-->
+        <form id="signup">
+            <fieldset>
+                <legend>Sign up</legend>
+                <p>
+                <input type="email" id="signup-email" placeholder="Email" required/>
+                </p>
+                <p>
+                <input type="password" id="signup-password" placeholder="Password"
+                        required/>
+                </p>
+                <p>
+                <input type="text" id="name" placeholder="Full name" required/>
+                </p>
+                <p>
+                <input type="text" id="color" placeholder="Favorite color"/>
+                </p>
+                <input type="submit" value="Sign up"/>
+            </fieldset>
+        </form>
+    </div>
+    <script>
+        window.auth0 = new Auth0({
+  domain: 'sitesalt.auth0.com',
+  clientID: 'uxqlKBGtq1DDOHgCCtZx0bH1O7GgDhrR',
+  // Callback made to your server's callback endpoint
+  callbackURL: 'http://www.sitesalt.com',
+});
+    </script>
+</section>
+{% endblock %}

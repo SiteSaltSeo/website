@@ -1,0 +1,39 @@
+.features-detailed {
+    padding: 100px 80px;
+    > p{
+        text-align: left;
+        max-width: none;
+        a {
+            &:hover {
+                text-decoration: none;
+                .svg {
+                    path {
+                        fill: #337ab7;
+                    }
+                }
+            }
+        }
+    }
+    .wrapper {
+        
+        .header {
+            display: flex;
+            align-self: center;
+            h1 {
+                text-align: left;
+                margin-top: 0;
+            }
+            img {
+                height: 100%;
+                margin-left: 25px;
+            }
+        }
+        .tool-description {
+            p {
+                text-align: left;
+                margin-left: 0;
+                max-width: none;
+            }
+        }
+    }
+}

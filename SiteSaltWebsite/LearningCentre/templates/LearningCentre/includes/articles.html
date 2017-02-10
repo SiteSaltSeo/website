@@ -1,27 +1,52 @@
     <div class="article-wrapper wrapper ">
         <h2>Articles</h2>
-        <div class="article-lockup flex-lockup lockup-main">
+        <div class="article-lockup lockup-main">
             {% for article in articles %}
-                <div class="article-container section-container " style="background-image: url( {{article.image.url}} )">
-                    <div class="overlay"></div>
+                <div class="article-container section-container">
                     <div class="article-information">
-                        <div class="article-meta">
-                            <span>{{article.author.first_name}} {{article.author.last_name}}</span>
+                        <div class="img-container">
+                            <img src="{{article.image.url}}" alt="{{article.image.name}}">
                         </div>
-                        <div class="article-content">
-                        <h3>{{article.title}}</h3>
-                        <p>{{article.short_description}}</p> 
+                        <div class="wrapper">
+                            <div class="article-meta">
+                                <span>{{article.read_time}} min. read</span>
+                                <h2>{{article.title}}</h2>
+                               <div><span>{{article.author.first_name}} {{article.author.last_name}}</span> / {{article.date_posted}}</div>
+                            </div>
+                            <div class="article-content">
+                            
+                                <p>{{article.short_description}}</p> 
+                            </div>
+                            <div class="footer">
+                                <p><a href="articles/{{article.slug}}">Read Article</a></p>
+                                <div class="social-lockup">
+                                    <a href=""></a>
+                                    <a href=""></a>
+                                    <a href=""></a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="footer">
-                            <span>{{article.read_time}}min.read</span>
-                            <p><a href="{{article.slug}}">Read Article</a></p>
-                        </div>
-                        
                     </div>
-                    
                 </div>
             {% endfor %}
         </div>
         <p><a href="/learning-centre/articles">View All</a></p>
+        <div class="pagination">
+            <span class="step-links">
+                {% if articles.has_previous %}
+                    <a href="?page={{ articles.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                     {{ articles.number }} of {{ articles.paginator.num_pages }}
+                </span>
+
+                {% if articles.has_next %}
+                    <a href="?page={{ articles.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
     
+
+  

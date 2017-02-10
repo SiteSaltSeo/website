@@ -1,0 +1,27 @@
+.course-section {
+    padding-top: 0;
+}
+
+.course-wrapper {
+    padding: 0 40px;
+    margin-top: 0;
+    .video-lockup {
+        width: 100%;
+        max-width: 1170px;
+
+        .course-container {
+            margin: 0 auto 100px auto;
+            padding: 0 40px;
+
+            .img-container {
+                margin-right: 40px;
+            }
+            &:nth-of-type(2n) {
+                .img-container {
+                    margin-right: 0;
+                    margin-left: 40px;
+                }
+            }
+        }
+    }
+}

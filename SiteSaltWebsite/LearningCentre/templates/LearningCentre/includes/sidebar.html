@@ -1,0 +1,10 @@
+<aside>
+    {% include 'LearningCentre/includes/searchbar.html' %}
+    <div class="recent-posts">
+        <h2>Recent Posts</h2>
+        <ul>
+            {% for articles in articles_list %}
+            <li><span>{% include 'frontend/includes/icon-radio.svg' %}</span> {{articles.title}}</li>
+        </ul>
+    </div>
+</aside>

@@ -1,22 +1,25 @@
- <nav class="navbar" role="navigation">
+ {% load staticfiles %}
+ {% load get_range %}
+ <nav class="navbar navbar-sticky" role="navigation">
       <div class="container">
         <div class="navbar-header col-md-3">
-          <a class="navbar-brand" href="#">SiteSalt.</a>
+          <a class="navbar-brand" href="/"><img src="{% static 'frontend/icons/logo.svg' %}" alt="SiteSalt. logo"></a>
         </div>
         <div class="col-md-6">
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav page-nav">
-            <li class="active"><a href="/">Home</a></li>
-            <li><a href="/features">Features</a></li>
-            <li><a href="/learning-centre">Learning Centre</a></li>
-            <li><a href="/plans">Pricing</a></li>
+            <li class="{% active "/" %}"><a href="/">Home</a></li>
+            <li class="{% active 'features' %}"><a href="/features" >Features</a></li>
+            <li class="{% active 'learning-centre' %}" ><a href="/learning-centre">Learning Centre</a></li>
+            <li class="{% active 'plans' %}"><a href="/plans">Pricing</a></li>
           </ul>
         </div>
         </div>
 
         <div class="col-md-3">
             <ul class="nav navbar-nav sign-in">
-                <li><a href="#">Sign Up / Sign In</a></li>
+                <li><a href="login/" class="sign-up">Sign Up</a></li>
+                <li><a href="#" onclick="lock.show();">Sign In</a></li>
             </ul>
         </div>
       </div>

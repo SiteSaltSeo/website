@@ -24,23 +24,22 @@
         <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
         {% include 'material/includes/material_js.html' %}
         <link rel="stylesheet" href="{% static 'frontend/css/styles.css' %}" type="text/css">
-        
+
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     </head>
     <body class="page-{% block body_class %}{% endblock %}">
         <header>
             {% include 'frontend/includes/navbar.html' %}
         </header>
-        {% include 'frontend/includes/jumbotron.html' %}
+        {% block jumbotron %}
+            {% include 'frontend/includes/jumbotron.html' %}
+        {% endblock %}
         <main role="main">
+            {% include 'frontend/includes/social-links.html' %}
             {% block content %}
             
             {% endblock %}
         </main>
-        <footer>
-        <ul>
-            <li>SiteSalt.</li>
-            <li>SiteSalt. © <span>2016 All rights reserved</span></li>
-        </ul>
-        </footer>
+        {% include 'frontend/includes/footer.html' %}
     </body>
 </html>

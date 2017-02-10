@@ -26,4 +26,19 @@
         {% endfor %}
         </div>
         <p><a href="/learning-centre/courses">View All</a></p>
+        <div class="pagination">
+            <span class="step-links">
+                {% if courses.has_previous %}
+                    <a href="?page={{ courses.previous_page_number }}">previous</a>
+                {% endif %}
+
+                <span class="current">
+                     {{ courses.number }} of {{ courses.paginator.num_pages }}
+                </span>
+
+                {% if courses.has_next %}
+                    <a href="?page={{ courses.next_page_number }}">next</a>
+                {% endif %}
+            </span>
+        </div>
     </div>

@@ -1,0 +1,53 @@
+{% extends "frontend/base.html" %}
+{% block head_title %}{{article.title}} | {{ block.super }} {% endblock head_title %}
+{% block jumbotron %} {% include 'LearningCentre/includes/article-jumbotron.html' %} {% endblock jumbotron %}
+{% block body_class %}articles{% endblock %}
+{% block content %}
+<p class="back-arrow" ><a href="" onclick="history.go(-1)"><span>{%include 'LearningCentre/includes/arrow.svg'%}</span>back </a></p>
+<section class="single-article-page">
+    <article>
+        <div class="article-wrapper">
+            <div class="article-content">
+                <div class="article-head">
+                    <span>{{article.author.first_name}} {{article.author.last_name}}</span> / {{article.date_posted}}
+                </div>
+                <h1>{{article.title}}</h1>
+                <div>
+                    <p>{{article.content | linebreaks}}</p>
+                </div>
+                <div class="share">
+                    <ul>
+                        <li><a href="">{% include 'frontend/includes/icon-twitter.svg' %}</a></li>
+                        <li><a href="">{% include 'frontend/includes/icon-twitter.svg' %}</a></li>
+                        <li><a href="">{% include 'frontend/includes/icon-twitter.svg' %}</a></li>
+                    </ul>
+                    <p><span>{% include 'frontend/includes/icon-share.svg' %}</span> Share</p>
+
+                </div>
+            </div>
+        </div>
+    </article>
+    <aside>
+        <div class="search-articles">
+            <h4>Search</h4>
+            {% include 'LearningCentre/includes/searchbar-alt.html' %}
+        </div>
+        <div class="recent-posts">
+            <h4>Recent Posts</h4>
+            <ul>
+                {% for articles in articles_list %}
+                    <li><span>{% include 'frontend/includes/icon-radio.svg' %}</span><a href="/learning-centre/articles/{{articles.slug}}" >{{articles.title}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+</section>
+{% if next_article %}
+<section class="next-article"style="background-image: url({{next_article.image.url}})">
+    <div class="content-container" >
+        <a href="/learning-centre/articles/{{next_article.slug}}"><h1>{{next_article.title}}</h1></a>
+        <a href="/learning-centre/articles/{{next_article.slug}}"><p>Next article</p></a>
+    </div>
+</section>
+{% endif %}
+{% endblock %}

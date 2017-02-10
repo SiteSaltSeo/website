@@ -17,23 +17,27 @@ from django.contrib import admin
 from django.conf.urls import url, include
 from rest_framework import routers
 from dashboard import views
+from Accounts.views import login_view
 
 from django.conf import settings
 from django.conf.urls.static import static
+from rest_framework_jwt.views import obtain_jwt_token
 
 router = routers.DefaultRouter()
 router.register(r'dinosaurs', views.DinosaurViewSet)
 
 urlpatterns = [
-    # url(r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     url(r'^admin/', admin.site.urls),
     url(r'^tinymce/', include('tinymce.urls')),
     url(r'^', include('frontend.urls'), name='index'),
+    url(r'^login/', login_view, name='login'),
     url(r'^plans/', include('pricing.urls'), name='pricing'),
     url(r'^features/', include('Tools.urls', namespace="features")),
     url(r'^learning-centre/', include('LearningCentre.urls', namespace="learning_centre")),
     url(r'^dinosaurs', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+
+
 
 ]
 

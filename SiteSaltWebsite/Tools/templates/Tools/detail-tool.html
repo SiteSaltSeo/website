@@ -2,8 +2,19 @@
 {% block head_title %}{{object_list.title}} | {{ block.super }}{% endblock head_title %}
 {% block body_class %}tools-detail{% endblock %}
 {% block content %}
-    <h1>{{object_list.title}}</h1>
-    <div class="tool-description">
-        {{object_list.description}}
+<section class="features-detailed">
+    <p><a href="/features/">{% include 'frontend/includes/arrow.svg'%} Back to features</a></p>
+    <div class="wrapper">
+        <div class="header">
+            <h1>{{object_list.title}}</h1>
+            <img src="{{object_list.icon.url}}" alt="{{object_list.icon.name}}">
+        </div>
+        
+        <div class="tool-description">
+            <p>{{object_list.description}}</p>
+        </div>
     </div>
+
+</section>
+
 {% endblock %}

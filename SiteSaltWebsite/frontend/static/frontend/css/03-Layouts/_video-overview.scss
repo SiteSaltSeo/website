@@ -1,0 +1,15 @@
+.section-video {
+    display: flex;
+
+    .video-wrapper {
+        width: 70vw;
+        padding: 0 50px;
+        .video-lockup {
+            display: block;
+
+            .video-container {
+                margin: 0 auto 50px auto;
+            }
+        }
+    }
+}

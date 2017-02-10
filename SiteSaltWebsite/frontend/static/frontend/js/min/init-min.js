@@ -1,0 +1,1 @@
+!function(){function n(){$(".share").on({mouseenter:function(){$(this).children("ul").addClass("display")},mouseleave:function(){$(this).children("ul").removeClass("display")}})}function s(){$(window).scroll(function(){$(this).scrollTop()>1?$("nav").addClass("sticky"):$("nav").removeClass("sticky")})}$(function(){n(),s()})}(jQuery);

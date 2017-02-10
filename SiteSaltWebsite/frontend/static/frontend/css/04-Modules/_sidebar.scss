@@ -1,0 +1,70 @@
+
+aside {
+    padding-left: 40px;
+    border-left: 1px solid #D4D4D4;
+
+    div {
+        margin-bottom: 50px;
+    }
+    h4 {
+        text-align: left;
+        @include fontSize(16px);
+        margin-bottom: 25px;
+    }
+    .search-articles {
+        .search-alt {
+            input[type="text"] {
+                /* Rectangle 1 Copy 2: */
+                background: #F3F3F3;
+                border: 1px solid #E2E2E2;
+                border-radius: 2px;
+                color: #8E9091;
+
+                &::-webkit-input-placeholder {
+                    color: #8E9091;
+                }
+            }
+            input::-moz-input-placeholder {
+                color: $sitesaltAccent;
+            }
+            &:-moz-input-placeholder {
+                color: $sitesaltAccent;
+            }
+            &:-ms-input-placeholder {
+                color: $sitesaltAccent;
+            }
+        }
+    }
+    .recent-posts {
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                list-style: none;
+                margin-bottom: 15px;
+                display: flex;
+                span {
+                    margin-right: 15px;
+                }
+                a {
+                    text-align: left;
+                }
+                &:hover {
+                    a {
+                        text-decoration: none;
+                        
+                    }
+                    .svg {
+                        circle#Oval-16 {
+                            fill: $sitesaltLightBlue;
+                        }
+                        circle#Oval-16-Copy {
+                            stroke: $sitesaltLightBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

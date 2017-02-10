@@ -12,6 +12,6 @@ class ToolsAdmin(admin.ModelAdmin):
     search_fields = ['title']
     list_filter = ["featured", "plan"]
     filter_horizontal = ['plan']
-    
+
 
 admin.site.register(Tool, ToolsAdmin)

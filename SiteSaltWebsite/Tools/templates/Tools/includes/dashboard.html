@@ -1,0 +1,20 @@
+{% load static %}
+<section>
+    {% for page in pages %}
+        <h1>{{page.title}}</h1>
+        <p>{{page.content}}</p>
+    {% endfor %}
+</section>
+<article>
+    <div class="dashboard-wrapper">
+        <div class="dashboard-blurb">
+            <h1>The Dashboard</h1>
+            <p>
+                Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu ullamcorper orci. Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque faucibus.
+            </p>
+        </div>
+        <div class="img-container">
+            <img src="{% static 'frontend/img/Macbook.png' %}" alt="ipad">
+        </div>
+    </div>
+</article>

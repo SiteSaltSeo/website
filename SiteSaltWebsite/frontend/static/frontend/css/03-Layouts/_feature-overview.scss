@@ -1,0 +1,56 @@
+.features-list {
+    padding: 0px !important;
+    h1 {
+
+    }
+    .feature-wrap {
+        padding: 50px 0 0 0;
+    }
+    .image {
+        background: {
+            image: url(../img/background3.png);
+            repeat: no-repeat;
+            size: cover;
+        }
+        height: 700px;
+    }
+    .features {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1200px;
+        margin: 75px auto 0 auto;
+
+        a {
+            display: flex;
+            max-width: 400px;
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+            h2 {
+
+                text-align: left;
+                margin-top: 0;
+                @include fontSize(18px);
+            }
+            .icon {
+                margin-right: 15px;
+            }
+            .description {
+                p {
+
+                    text-align: left;
+                    @include fontSize(14px);
+                }
+            }
+
+            &:hover {
+                background-color: #fff;
+                h2, .description p {
+                    color: $sitesaltBaseGrey;
+                }
+                @include shadowLarge(000, 000, 000, 0.8);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+}
